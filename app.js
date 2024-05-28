@@ -6,8 +6,8 @@ function eid_countdown() {
     let minutes = document.getElementById('minutes-text')
     let seconds = document.getElementById('seconds-text')
     days.innerText = Math.floor((eid_date - newdate) / (1000 * 60 * 60 * 24))
-    hours.innerText = Math.floor((eid_date - newdate) / (1000 * 60 * 60))
-    minutes.innerText = Math.floor((eid_date - newdate) / (1000 * 60 ))
-    seconds.innerText = Math.floor((eid_date - newdate) / (1000))
+    hours.innerText = Math.floor((eid_date - newdate) / (1000 * 60 * 60) % 24)
+    minutes.innerText = Math.floor((eid_date - newdate) / (1000 * 60 ) % 60)
+    seconds.innerText = Math.floor((eid_date - newdate) / (1000) % 60)
 }
 setInterval(eid_countdown, 1000);
